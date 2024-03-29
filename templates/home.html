@@ -1,0 +1,93 @@
+{% extends "base.html" %} {% block content %}
+<div class="w-100 p-3 pt-0">
+  <div
+    class="showcase rounded-2"
+    style="height: min-content; background-image: url('static/sample.jpg')"
+  >
+    <div class="darken rounded-2">
+      <h1 class="heading headtitle display-2">
+        <b>Empowering Early Detection:</b>
+      </h1>
+      <br />
+      <h1>Take Control of Your Parkinson's Risk.</h1>
+      <br /><br />
+      <div class="blockquote">
+        Worried about Parkinson's disease? Our innovative prediction tool
+        empowers you with personalized insights into your potential risk.
+      </div>
+      <button class="btn btn-warning mt-4">
+        <a href="#predict" class="">Predict your risk</a>
+      </button>
+    </div>
+  </div>
+
+  <div
+    class="prediction col-sm-10 col-md-75 col-lg-6 bg-light p-4 pt-2 m-4 mt-4 m-auto rounded"
+    id="predict"
+  >
+    <div class="sect">
+      <div class="heading d-flex align-items-center flex-nowrap">
+        <img src="static/parkinson.png" class="w-25 h-50 p-3 ps-1" />
+        <h3 class="me-2 ms-2">Prediction using tremor and muscle rigidity</h3>
+      </div>
+      <hr />
+      <div class="matter">
+        Parkinson's disease can cause tremors and muscle rigidity, which can
+        manifest in a person's handwriting and drawing ability.
+      </div>
+      <p class="muted h6 fst-italic">
+        This app provides a preliminary assessment. For a confirmed diagnosis,
+        please consult a healthcare professional.
+      </p>
+      <br />
+      <h4>Spiral Drawings:</h4>
+      <hr />
+      <div class="matter">
+        People with PD may exhibit micrographia (smaller handwriting) and
+        difficulty maintaining a consistent size and shape in spiral drawings.
+        The model analyzes the uploaded image for these characteristics, which
+        could indicate tremors or rigidity affecting fine motor skills.
+      </div>
+      <button class="btn btn-primary mt-3 mb-4">
+        <a href="/spiral" class="">Predict using spiral drawing</a></button
+      ><br /><br />
+      <h4>Wave Drawings:</h4>
+      <hr />
+      <div class="matter">
+        Similar to spirals, wave drawings created by people with PD might show
+        irregularities in size, smoothness, and continuity due to tremors or
+        stiffness affecting hand movements. The model assesses the wave drawing
+        for such characteristics.
+      </div>
+      <button class="btn btn-primary mt-3 mb-4">
+        <a href="/wave" class="">Predict using wave drawing</a></button
+      ><br />
+    </div>
+    <br /><br />
+    <div class="sect">
+      <div class="heading d-flex align-items-center flex-nowrap">
+        <img src="static/brain.png" class="w-25 h-50 p-3 ps-1" />
+        <h3 class="me-2 ms-2">Prediction using MRI scans</h3>
+      </div>
+      <hr />
+      <div class="matter">
+        Machine learning models can potentially analyze MRI scans to predict
+        Parkinson's disease (PD) by identifying subtle changes in brain
+        structure associated with the condition.<br />
+        <p class="muted h6 fst-italic">
+          This app provides a preliminary assessment. For a confirmed diagnosis,
+          please consult a healthcare professional.
+        </p>
+        <br />
+        <span class="h6">Early Detection:</span> Machine learning aided MRI
+        analysis has the potential to detect Parkinson's disease earlier than
+        traditional methods, allowing for earlier intervention and improved
+        patient outcomes.
+      </div>
+      <button class="btn btn-primary mt-3 mb-3">
+        <a href="/mri" class="">Predict using MRI</a></button
+      ><br />
+    </div>
+  </div>
+</div>
+{% endblock %}
